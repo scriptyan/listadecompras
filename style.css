@@ -24,8 +24,13 @@ h1 {
     color: #4E93C0;
 }
 
-input {
-    width: 70%;
+.input-group {
+    display: flex;
+    gap: 5px;
+}
+
+.input-group input {
+    flex: 1;
     padding: 8px;
     border: none;
     border-radius: 5px;
@@ -33,8 +38,8 @@ input {
     color: white;
 }
 
-button {
-    padding: 8px;
+.input-group button {
+    padding: 8px 12px;
     cursor: pointer;
     border: none;
     border-radius: 5px;
@@ -45,6 +50,7 @@ button {
 li button {
     background: #C02520;
     color: white;
+    padding: 5px 10px;
 }
 
 ul {
@@ -58,6 +64,7 @@ li {
     padding: 8px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     border-radius: 5px;
 }
 
@@ -75,15 +82,15 @@ li {
         font-size: 22px;
     }
 
-    input,
-    button {
+    .input-group {
+        flex-direction: column;
+    }
+
+    .input-group input,
+    .input-group button {
         width: 100%;
         font-size: 16px;
         padding: 10px;
         box-sizing: border-box;
-    }
-
-    input {
-        margin-bottom: 8px;
     }
 }
