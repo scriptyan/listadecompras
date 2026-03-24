@@ -3,47 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lista de Compras</title>
 </head>
+
 <body>
 
-<div class="container">
-  <h1>Lista de Compras</h1>
-  <input type="text" id="taskInput" placeholder="Digite uma tarefa">
-  <button onclick="addTask()">Adicionar</button>
+  <div class="container">
+    <h1>Lista de Compras</h1>
+    <input type="text" id="taskInput" placeholder="Digite uma tarefa">
+    <button onclick="addTask()">Adicionar</button>
 
-  <ul id="taskList"></ul>
-</div>
+    <ul id="taskList"></ul>
+  </div>
 
-<script>
-  function addTask() {
-    const input = document.getElementById('taskInput');
-    const taskText = input.value;
+  <script>
+    function addTask() {
+      const input = document.getElementById('taskInput');
+      const taskText = input.value;
 
-    if (taskText === '') return;
+      if (taskText === '') return;
 
-    const li = document.createElement('li');
+      const li = document.createElement('li');
 
-    const span = document.createElement('span');
-    span.textContent = taskText;
-    span.onclick = function() {
-      span.classList.toggle('done');
-    };
+      const span = document.createElement('span');
+      span.textContent = taskText;
+      span.onclick = function () {
+        span.classList.toggle('done');
+      };
 
-    const btn = document.createElement('button');
-    btn.textContent = 'X';
-    btn.onclick = function() {
-      li.remove();
-    };
+      const btn = document.createElement('button');
+      btn.textContent = 'X';
+      btn.onclick = function () {
+        li.remove();
+      };
 
-    li.appendChild(span);
-    li.appendChild(btn);
+      li.appendChild(span);
+      li.appendChild(btn);
 
-    document.getElementById('taskList').appendChild(li);
+      document.getElementById('taskList').appendChild(li);
 
-    input.value = '';
-  }
-</script>
+      input.value = '';
+    }
+  </script>
 
 </body>
+
 </html>
