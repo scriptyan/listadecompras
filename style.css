@@ -4,8 +4,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
+    padding: 10px;
 }
 
 .container {
@@ -66,12 +67,21 @@ li {
 }
 
 @media (max-width: 480px) {
+    .container {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
     input {
         width: 100%;
-        margin-bottom: 10px;
+        font-size: 16px;
     }
 
     button {
         width: 100%;
+        font-size: 16px;
     }
 }
